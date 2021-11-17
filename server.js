@@ -5,8 +5,8 @@ let express = require("express");
 //activate it by creating a new variable.
 let app = express();
 
-//define the port we want to use.
-let port = 3000;
+//define the port we want to use. this is the variable created by heroku when it's running online.
+let port = process.env.PORT || 3000;
 
 //create a server variable telling to our express to listen to the port we defined. In this way we have simulated a local host.
 let server = app.listen(port);
